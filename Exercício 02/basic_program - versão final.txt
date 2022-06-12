@@ -1,0 +1,26 @@
+10 REM DESAFIO 2; Diego Souza Lima Marques - TIA: 32039921
+15 PRINT "Verificacao do ano: "
+20 INPUT N
+30 IF (N < 0 OR N > 2021) THEN GOTO 130
+31 LET A = 0
+32 LET B = 0
+33 LET C = 0
+35 LET MOD = N - (INT(N/4) * 4)
+40 IF (MOD >< 0) THEN GOTO 150
+50 IF (N < 1896) OR (N = 1916) OR (N > 1936 AND N < 1945) OR (N < 1992 AND MOD >< O) OR (N >= 1992 AND (MOD >< 2 AND MOD >< 0)) OR (N = 2020) THEN GOTO 170
+60 IF (N < 1930) OR (N > 1938 AND N < 1950) OR (MOD >< 2) THEN GOTO 190
+70 IF (A = 0) THEN PRINT "- Ano bissexto"
+75 IF (A = 1) THEN PRINT "- Ano nao bissexto"
+80 IF (B = 0) THEN PRINT "- Aconteceram Jogos Olimpicos"
+85 IF (B = 1) THEN PRINT "- Nao aconteceram Jogos Olimpicos"
+90 IF (C = 0) THEN PRINT "- Aconteceu Copa do Mundo"
+95 IF (C = 1) THEN PRINT "- Nao aconteceu Copa do Mundo"
+100 GOTO 15
+130 PRINT "- Ano invalido"
+140 GOTO 15
+150 A = 1
+160 GOTO 50
+170 B = 1
+180 GOTO 60
+190 C = 1
+200 GOTO 70
